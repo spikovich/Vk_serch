@@ -35,11 +35,11 @@ std::vector<int> find_closest_numbers(const std::vector<int>& numbers, int x, in
 
     
     std::cout << "\n------------------------------------------------\n";
-    std::cout << "Исходные числа:";
+    std::cout << "first:";
     for (auto k : numbers) {
         std::cout << " " << k;
     }
-    std::cout << "\nНайденные числа для " << x << " :";
+    std::cout << "\nfind num " << x << " :";
     for (auto k : res) {
         std::cout << " " << k;
     }
