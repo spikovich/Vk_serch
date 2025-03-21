@@ -63,25 +63,27 @@ long long find_min_mult(const std::vector<int>& nums)
     return min_product;
 }
 
-void print_example(const std::vector<int>& ns)
-{
-    std::cout << "\nInput array: ";
-    for (const int num : ns)
-    {
-        std::cout << num << "  ";
-    }
-    std::cout << "\nResult is " << find_min_mult(ns) << std::endl;
-}
-
 int main()
 {
-    print_example({ 9, 4, 2, 5, 3 });
-    print_example({ 9, 4, 2, 5, 3, 2 });
+    int N;
+    std::cin >> N;
 
-    print_example({ 9, 4, 2, 5, 3, 2, -19, 7 });
-    print_example({ 9, 4, 2, 5, 3, 2, -19, -10 });
+    std::vector<int> nums(N);
+    for (int i = 0; i < N; ++i)
+    {
+        std::cin >> nums[i];
+    }
 
-    print_example({ -2, -3, -4, -5 });
+    try
+    {
+        long long result = find_min_mult(nums);
+        std::cout << result << std::endl;
+    }
+    catch (const std::out_of_range& e)
+    {
+        std::cerr << e.what() << std::endl;
+        return 1;
+    }
 
     return 0;
 }

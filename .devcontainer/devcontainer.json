@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "test": "make check",
+    "build": "cmake . && make"
+  }
+}
